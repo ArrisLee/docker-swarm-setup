@@ -14,6 +14,7 @@ echo \
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io
 docker version
+apt install net-tools
 IP_ADDR=$(ifconfig eth0 | grep inet | head -n 1 | cut -d: -f2 | awk '{ print $2}')
 docker swarm init --advertise-addr $IP_ADDR
 curl -L https://downloads.portainer.io/agent-stack-ee20.yml -o agent-stack.yml && docker stack deploy --compose-file=agent-stack.yml portainer-agent
