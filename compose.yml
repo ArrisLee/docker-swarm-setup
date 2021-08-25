@@ -2,4 +2,3 @@ version: "3"
 services:
   busybox:
     image: "alpine:3.7"
-    container_name: "test_container_one"
