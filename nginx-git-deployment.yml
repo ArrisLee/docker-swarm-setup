@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-git-deployment
+  labels:
+    app: nginx-git-label
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-git-label
+  template:
+    metadata:
+      labels:
+        app: nginx-git-label
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+          - containerPort: 90
+          imagePullPolicy: Always
