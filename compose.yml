@@ -1,5 +1,5 @@
 version: "3"
 services:
  nginx:
-  image: "nginx:latest"
+  image: "nginx:1.18"
   container_name: nginx-container
