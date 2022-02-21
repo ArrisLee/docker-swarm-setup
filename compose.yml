@@ -2,4 +2,5 @@ version: "3"
 services:
  nginx:
   image: "nginx:latest"
+  restart: always
   container_name: nginx-container
